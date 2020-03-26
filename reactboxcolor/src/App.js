@@ -5,6 +5,8 @@ export default class App extends Component {
   constructor(props) {
     super(props);
 
+    {/*Default color of box when DOM Loads*/}
+
   this.state =  {
     color: 'blue',
     clickCounter: 0 
@@ -12,6 +14,7 @@ export default class App extends Component {
 }
 
 onChange = (e) => {
+{/* Loops through a color array with each click */}
   let i = Math.floor(Math.random()*3);
   let colors = ['blue','orange','green'];
   this.setState({
@@ -19,15 +22,18 @@ onChange = (e) => {
     clickCounter: this.state.clickCounter++
   })
 }
-  render(){
-    return (
-      <div className='App'>
-          <h1>Box color change</h1>
-          <div className="colorBox"
-          style = {{backgroundColor:this.state.color}} onClick={this.onChange} >
-            <p >Click Here </p>
-          </div>
+
+render() {
+  return (
+    <div className="App">
+      <h1> Box color change .</h1>
+      <div              className="colorBox"
+      style={{backgroundColor: this.state.color}}
+      onClick={this.onChange}
+      >
+      <p>Click Here</p>
       </div>
-    )
-  }
+    </div>
+  )
+}
 }
