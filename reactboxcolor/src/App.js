@@ -6,14 +6,14 @@ export default class App extends Component {
     super(props);
 
   this.state =  {
-    color: 'orange',
+    color: 'blue',
     clickCounter: 0 
   }  
 }
 
 onChange = (e) => {
-  let i = Math.floor(Math.random()*10);
-  let colors = ['blue','orange'];
+  let i = Math.floor(Math.random()*3);
+  let colors = ['blue','orange','green'];
   this.setState({
     color: colors[i],
     clickCounter: this.state.clickCounter++
@@ -25,7 +25,7 @@ onChange = (e) => {
           <h1>Box color change</h1>
           <div className="colorBox"
           style = {{backgroundColor:this.state.color}} onClick={this.onChange} >
-            <p >Click me </p>
+            <p >Click Here </p>
           </div>
       </div>
     )
