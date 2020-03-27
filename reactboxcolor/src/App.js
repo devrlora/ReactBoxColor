@@ -6,7 +6,6 @@ export default class App extends Component {
     super(props);
 
     {/*Default color of box when DOM Loads*/}
-
   this.state =  {
     color: 'blue',
     clickCounter: 0 
