@@ -14,7 +14,7 @@ export default class App extends Component {
 }
 
 onChange = (e) => {
-{/* Loops through a color array with each click */}
+{/* Loops through each color in the array with each click */}
   let i = Math.floor(Math.random()*3);
   let colors = ['blue','orange','green'];
   this.setState({
